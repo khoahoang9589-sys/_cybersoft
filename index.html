@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <title>Bài Tập JS</title>
+</head>
+
+<body>
+    <div class="container w-50 mt-5 p-2 shadow rounded bg-body-tertiary">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs  fs-5" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="bt1-tab" data-bs-toggle="tab" data-bs-target="#bt1" type="button"
+                    role="tab" aria-controls="bt1" aria-selected="true">
+                    Bài tập 1
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bt2-tab" data-bs-toggle="tab" data-bs-target="#bt2" type="button"
+                    role="tab" aria-controls="bt2" aria-selected="false">
+                    Bài tập 2
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bt3-tab" data-bs-toggle="tab" data-bs-target="#bt3" type="button"
+                    role="tab" aria-controls="bt3" aria-selected="false">
+                    Bài tập 3
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bt4-tab" data-bs-toggle="tab" data-bs-target="#bt4" type="button"
+                    role="tab" aria-controls="bt4" aria-selected="false">
+                    Bài tập 4
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bt5-tab" data-bs-toggle="tab" data-bs-target="#bt5" type="button"
+                    role="tab" aria-controls="bt5" aria-selected="false">
+                    Bài tập 5
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content px-2 pt-2">
+            <!-- start bt1  -->
+            <div class="tab-pane active" id="bt1" role="tabpanel" aria-labelledby="bt1-tab">
+                <div class="container">
+                    <h3 class="text-success">Tính tiền lương nhân viên</h3>
+                    <form>
+                        <div class="mb-3 row">
+                            <div class="col-lg-6 pb-2">
+                                <input type="text" class="form-control" name="inputName" id="inputLuong"
+                                    placeholder="Nhập lương một ngày" />
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" name="inputName" id="inputNgaycong"
+                                    placeholder="Số ngày công" />
+                            </div>
+                        </div>
+                        <div class="container mb-3 w-75">
+                            <div class="alert alert-success fw-bold fs-3" role="alert">👉 <span id="kq-bt1"></span></div>
+                            <div class="offset-sm-4 col-sm-8">
+                                <button type="submit" id="btn-bt1" class="btn btn-primary">
+                                    Tính lương
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end bt1  -->
+
+            <!-- start bt2  -->
+            <div class="tab-pane" id="bt2" role="tabpanel" aria-labelledby="bt2-tab">
+                <div class="container">
+                    <h3 class="text-success">Tính giá trị trung bình</h3>
+                    <form>
+                        <div class="mb-3 row">
+                            <div class="col-lg-4 pb-1">
+                                <input type="text" class="form-control" name="inputName" id="inputN1"
+                                    placeholder="Nhập số thứ 1" />
+                            </div>
+                            <div class="col-lg-4 pb-1">
+                                <input type="text" class="form-control" name="inputName" id="inputN2"
+                                    placeholder="Nhập số thứ 2" />
+                            </div>
+                            <div class="col-lg-4 pb-1">
+                                <input type="text" class="form-control" name="inputName" id="inputN3"
+                                    placeholder="Nhập số thứ 3" />
+                            </div>
+                            <div class="col-lg-4 pb-1">
+                                <input type="text" class="form-control" name="inputName" id="inputN4"
+                                    placeholder="Nhập số thứ 4" />
+                            </div>
+                            <div class="col-lg-4 pb-1">
+                                <input type="text" class="form-control" name="inputName" id="inputN5"
+                                    placeholder="Nhập số thứ 5" />
+                            </div>
+                        </div>
+                        <div class="container mb-3 w-75">
+                            <div class="alert alert-success fw-bold fs-3 w-3" role="alert">👉 <span id="kq-bt2"></span>
+                            </div>
+                            <div class="mb-3">
+                                <div class="offset-sm-4 col-sm-8">
+                                    <button type="submit" id="btn-bt2" class="btn btn-primary">
+                                        Tính trung bình
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end bt2  -->
+
+            <!-- start bt3  -->
+            <div class="tab-pane" id="bt3" role="tabpanel" aria-labelledby="bt3-tab">
+                <div class="container">
+                    <h3 class="text-success">Quy đổi tiền</h3>
+                    <form>
+                        <div class="mb-3 row">
+                            <div class="col-lg-6 pb-2">
+                                <input type="text" class="form-control" name="inputName" id="inputPrice"
+                                    placeholder="Nhập số tiền USD" />
+                            </div>
+                            <i>Tỷ giá USD: 23.500</i>
+                        </div>
+                        <div class="container mb-3 w-75">
+                            <div class="alert alert-success fw-bold fs-3" role="alert">👉 <span id="kq-bt3"></span>
+                            </div>
+
+                            <div class="offset-sm-4 col-sm-8">
+                                <button type="submit" id="btn-bt3" class="btn btn-primary">
+                                    Quy đổi tiền
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end bt3  -->
+
+            <!-- start bt4  -->
+            <div class="tab-pane" id="bt4" role="tabpanel" aria-labelledby="bt4-tab">
+                <div class="container">
+                    <h3 class="text-success">Tính diện tích, chu vi hình chữ nhật</h3>
+                    <form>
+                        <div class="mb-3 row">
+                            <div class="col-lg-6 pb-2">
+                                <input type="text" class="form-control" name="inputName" id="inputDai"
+                                    placeholder="Nhập chiều dài" />
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" name="inputName" id="inputRong"
+                                    placeholder="Nhập chiều rộng" />
+                            </div>
+                        </div>
+                        <div class="container mb-3 w-75">
+                            <div class="alert alert-success fw-bold " role="alert">👉 <span id="kq-bt4"></span>
+                            </div>
+
+                            <div class="offset-sm-4 col-sm-8">
+                                <button type="submit" id="btn-bt4" class="btn btn-primary">
+                                    Tính
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end bt4  -->
+
+            <!-- start bt5  -->
+            <div class="tab-pane" id="bt5" role="tabpanel" aria-labelledby="bt5-tab">
+                <div class="container">
+                    <h3 class="text-success">Tính tổng 2 ký số</h3>
+                    <form>
+                        <div class="mb-3 row">
+                            <div class="col-lg-6 pb-2">
+                                <input type="text" class="form-control" name="inputName" id="inputTong2"
+                                    placeholder="Nhập số có 2 chữ số" />
+                            </div>
+                        </div>
+                        <div class="container mb-3 w-75">
+                            <div class="alert alert-success fw-bold fs-3" role="alert">👉 <span id="kq-bt5"></span>
+                            </div>
+
+                            <div class="offset-sm-4 col-sm-8">
+                                <button type="submit" id="btn-bt5" class="btn btn-primary">
+                                    Tính tổng
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end bt4  -->
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
