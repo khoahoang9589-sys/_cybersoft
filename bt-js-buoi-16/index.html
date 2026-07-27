@@ -23,7 +23,7 @@
                 <button class="btn btn-primary mx-2 rounded-5" type="button" onclick="addNum()">Thêm số</button>
             </div>
             <div class="alert alert-danger" role="alert">
-                👉<span id="txtNum"></span>
+                👉 <span id="txtNum"></span>
             </div>
         </form>
         <div class="accordion" id="accordionExample">
@@ -41,7 +41,7 @@
                                 onclick="sumDuong()">Tính</button>
                         </div>
                         <div class="col-12 alert alert-danger" role="alert">
-                            👉<span id="txtSumDuong"></span>
+                            👉 <span id="txtSumDuong"></span>
                         </div>
 
                     </div>
@@ -61,7 +61,7 @@
                                 onclick="countDuong()">Đếm</button>
                         </div>
                         <div class="col-12 alert alert-danger" role="alert">
-                            👉<span id="txtCountDuong"></span>
+                            👉 <span id="txtCountDuong"></span>
                         </div>
 
                     </div>
@@ -82,7 +82,7 @@
                                 onclick="soNhoNhat()">Tìm</button>
                         </div>
                         <div class="col-12 alert alert-danger" role="alert">
-                            👉<span id="txtSoNhoNhat"></span>
+                            👉 <span id="txtSoNhoNhat"></span>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                                 onclick="soDuongNhoNhat()">Tìm</button>
                         </div>
                         <div class="col-12 alert alert-danger" role="alert">
-                            👉<span id="txtSoDuongNhoNhat"></span>
+                            👉 <span id="txtSoDuongNhoNhat"></span>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                                 onclick="soChanCuoi()">Tìm</button>
                         </div>
                         <div class="col-12 alert alert-danger" role="alert">
-                            👉<span id="txtSoChanCuoi"></span>
+                            👉 <span id="txtSoChanCuoi"></span>
                         </div>
                     </div>
                 </div>
@@ -136,8 +136,19 @@
                     </button>
                 </h2>
                 <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        ...
+                    <div class="accordion-body row align-items-center gap-2">
+                        <div class="col-lg-4 col-12">
+                            <input type="number" class="form-control" id="viTri1" placeholder="Nhập số vị trí 1">
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <input type="number" class="form-control" id="viTri2" placeholder="Nhập số vị trí 2">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary rounded-5" type="button" onclick="doiCho()">Đổi chỗ</button>
+                        </div>
+                        <div class="col-12 alert alert-danger" role="alert">
+                            👉 <span id="txtDoiCho"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,8 +161,14 @@
                     </button>
                 </h2>
                 <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        ...
+                   <div class="accordion-body row align-items-center px-5">
+                        <div class="col-12">
+                            <button class="btn btn-primary m-2 rounded-5" type="button"
+                                onclick="tangDan()">Sắp xếp</button>
+                        </div>
+                        <div class="col-12 alert alert-danger" role="alert">
+                            👉 <span id="txtTangDan"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,8 +181,14 @@
                     </button>
                 </h2>
                 <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        ...
+                    <div class="accordion-body row align-items-center px-5">
+                        <div class="col-12">
+                            <button class="btn btn-primary m-2 rounded-5" type="button"
+                                onclick="findPrime()">Tìm số nguyên tố</button>
+                        </div>
+                        <div class="col-12 alert alert-danger" role="alert">
+                            👉 <span id="txtsoNguyenTo"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,8 +201,22 @@
                     </button>
                 </h2>
                 <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        ...
+                    <div class="accordion-body row align-items-center gap-2">
+                        <div class="col-lg-4 col-12">
+                            <input type="number" class="form-control" id="inputFloat" placeholder="Nhập số">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary rounded-5" type="button" onclick="addFloat()">Thêm số</button>
+                        </div>
+                        <div class="col-12 alert alert-danger" role="alert">
+                            👉 <span id="txtFloat"></span>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary rounded-5" type="button" onclick="countFloat()">Đếm số nguyên</button>
+                        </div>
+                        <div class="col-12 alert alert-danger" role="alert">
+                            👉 <span id="txtCountFloat"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,8 +229,14 @@
                     </button>
                 </h2>
                 <div id="collapse99" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        ...
+                    <div class="accordion-body row align-items-center px-5">
+                        <div class="col-12">
+                            <button class="btn btn-primary m-2 rounded-5" type="button"
+                                onclick="soSanhso()">So Sánh</button>
+                        </div>
+                        <div class="col-12 alert alert-danger" role="alert">
+                            👉 <span id="txtSoSanh"></span>
+                        </div>
                     </div>
                 </div>
             </div>

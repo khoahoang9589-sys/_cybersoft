@@ -1,4 +1,4 @@
-var numArray = [];
+const numArray = []; floatArray = []
 
 function addNum() {
     let n = Number(document.getElementById("inputNum").value);
@@ -57,82 +57,81 @@ function soDuongNhoNhat() {
 }
 
 function soChanCuoi() {
+    let last = numArray[0];
+    for (let i = 0; i < numArray.length; i++) {
+        if (numArray[i] % 2 == 0) {
+            last = numArray[i]
+        }
+    }
+    document.getElementById("txtSoChanCuoi").innerHTML = last;
+}
+
+function doiCho() {
+    let p = document.getElementById("viTri1").value;
+    let q = document.getElementById("viTri2").value;
+    let r = numArray[p];
+    numArray[p] = numArray[q];
+    numArray[q] = r;
+    document.getElementById("txtDoiCho").innerHTML = numArray
+}
+
+function tangDan() {
+    for (let i = 0; i < numArray.length; i++) {
+        for (let y = 0; y < numArray.length - 1; y++) {
+            if (numArray[y] > numArray[y + 1]) {
+                let t = numArray[y];
+                numArray[y] = numArray[y + 1];
+                numArray[y + 1] = t;
+            }
+        }
+    }
+    document.getElementById("txtTangDan").innerHTML = numArray
+}
+
+function isPrime(n) {
+    if (n <= 1) return false;
+    for (let i = 2; i < Math.sqrt(n); i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    } return true;
+}
+
+function findPrime() {
+    let n = 0;
+    for (let i = 0; i < numArray.length; i++) {
+        if (isPrime(numArray[i])) {
+            n = numArray[i]; break
+        }
+    }
+    document.getElementById("txtsoNguyenTo").innerHTML = n == 0 ? "Không có số nguyên tố" : n
+}
+
+function addFloat() {
+    let n = Number(document.getElementById("inputFloat").value);
+    floatArray.push(n)
+    document.getElementById("txtFloat").innerHTML = floatArray;
 
 }
 
+function countFloat() {
+    let n = 0;
+    for (let i = 0; i < floatArray.length; i++) {
+        if (Number.isInteger(floatArray[i])) {
+            n++
+        }
+    }
+    document.getElementById("txtCountFloat").innerHTML = n;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-// function findEven() {
-//     for (var n = 0, r = 0; r < numArray.length; r++)
-//         numArray[r] % 2 == 0 && (n = numArray[r]);
-//     getEle("txtEven").innerHTML = "Số chẵn cuối cùng: " + n
-// }
-
-// function swap(n, r) {
-//     var e = numArray[n];
-//     numArray[n] = numArray[r],
-//         numArray[r] = e
-// }
-
-// function changePosition() {
-//     swap(getEle("inputIndex1").value,
-//         getEle("inputIndex2").value),
-//         getEle("txtChangePos").innerHTML = "Mảng sau khi đổi: " + numArray
-// }
-
-// function sortIncrease() {
-//     for (var n = 0; n < numArray.length; n++)
-//         for (var r = 0; r < numArray.length - 1; r++)
-//             numArray[r] > numArray[r + 1] && swap(r, r + 1);
-//     getEle("txtIncrease").innerHTML = "Mảng sau khi sắp xếp: " + numArray
-// }
-
-// function checkPrime(n) {
-//     if (n < 2) return !1;
-//     for (var r = 2; r <= Math.sqrt(n); r++)
-//         if (n % r == 0) return !1;
-//     return !0
-// }
-
-// function findPrime() {
-//     for (var n = -1, r = 0; r < numArray.length; r++) {
-//         if (checkPrime(numArray[r])) {
-//             n = numArray[r]; break
-//         }
-//     }
-//     getEle("txtPrime").innerHTML = -1 !== n ? n : "Không có số nguyên tố"
-// }
-
-// function getFloat() {
-//     var n = Number(getEle("inputFloat").value);
-//     arrayFloat.push(n),
-//         getEle("txtArrayFloat").innerHTML = arrayFloat
-// }
-
-// function findInt() {
-//     for (var n = 0, r = 0; r < arrayFloat.length; r++)
-//         Number.isInteger(arrayFloat[r]) && n++;
-//     getEle("txtInt").innerHTML = "Số nguyên: " + n
-// }
-
-// function compareNum() {
-//     for (var n = 0, r = 0, e = 0; e < numArray.length; e++)
-//         numArray[e] > 0 ? n++ : numArray[e] < 0 && r++;
-//     getEle("txtCompare").innerHTML = n > r ? "Số dương > Số âm" : n < r ? "Số âm > Số dương" : "Số âm = Số dương"
-// }
-
-// document.addEventListener("contextmenu", function (n) { n.preventDefault() }, !1),
-//     document.onkeydown = function (n) {
-//         return 123 != (n = n || window.event).keyCode && (!n.ctrlKey || !n.shiftKey || 73 != n.keyCode) && void 0
-//     };
-// var numArray = [], arrayFloat = [];
+function soSanhso() {
+    let a = 0, b = 0;
+    for (let i = 0; i < numArray.length; i++) {
+        if (numArray[i] > 0) {
+            a++
+        } else if (numArray[i] < 0) {
+            b++
+        }
+    }
+    document.getElementById("txtSoSanh").innerHTML = a > b ? "Số dương > Số âm" : a < b ? "Số âm > Số dương" : "SỐ âm = Số dương";
+}
