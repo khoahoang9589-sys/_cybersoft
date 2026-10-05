@@ -5,3 +5,5 @@ qlsv-ui
 QuanLyNhanVien
 *.code-workspace
 **.vscode
+
+**/node_modules
