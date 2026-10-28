@@ -1,0 +1,4 @@
+import { NavLink, Outlet } from 'react-router-dom'
+export default function HomeTemplate() {
+  return <><header className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm"><div className="container"><NavLink className="navbar-brand fw-bold" to="/">MovieTime</NavLink><button aria-controls="main-navigation" aria-expanded="false" aria-label="Mở menu" className="navbar-toggler" data-bs-target="#main-navigation" data-bs-toggle="collapse" type="button"><span className="navbar-toggler-icon" /></button><nav className="collapse navbar-collapse" id="main-navigation" aria-label="Điều hướng chính"><div className="navbar-nav ms-auto"><NavLink className="nav-link" to="/home">Trang chủ</NavLink><NavLink className="nav-link" to="/profile">Tài khoản</NavLink><NavLink className="nav-link" to="/login">Đăng nhập</NavLink><NavLink className="nav-link" to="/register">Đăng ký</NavLink></div></nav></div></header><main className="container py-4"><Outlet /></main></>
+}
